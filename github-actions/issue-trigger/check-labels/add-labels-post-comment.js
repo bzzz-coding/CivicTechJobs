@@ -55,7 +55,7 @@ function getMissingLabels(currentLabels) {
 
 function generateComment(issueCreator, labels) {
   let templateFilePath = './github-actions/issue-trigger/check-labels/comment-template.md';
-  let text = fs.readFileSync(templateFilePath).toString('utf-8');
+  let text = fs.readFileSync(templateFilePath).toString('utf-8'); // fs.readFileSync() is the synchronous version of fs.readFile. Returns the contents of the file. https://nodejs.org/dist/latest-v6.x/docs/api/fs.html#fs_fs_readfilesync_file_options
   let labelsStr = labels.join(', '); // join the array into a string
   console.log(labelsStr);
   let comment = text.replace('${issueCreator}', issueCreator).replace('${labels}', labels.join(', ')); // replace placeholder strings with new values
