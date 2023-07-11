@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://hackforla.github.io/CivicTechJobs/developer/development-culture/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Development Culture - CivicTechJobs Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CivicTechJobs Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Joining the Team <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../joining-the-team/intro/" class="dropdown-item">Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/content-writer/" class="dropdown-item">Content Writer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/data-scientist/" class="dropdown-item">Data Scientist</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/product-manager/" class="dropdown-item">Project Manager</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-designer/" class="dropdown-item">UI/UX Designer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-researcher/" class="dropdown-item">UI/UX Researcher</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/web-developer/" class="dropdown-item">Web Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/other-volunteer/" class="dropdown-item">Other Volunteer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web Developer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#welcome-to-the-civictechjobs-contributing-guide" class="dropdown-item">CONTRIBUTING.md</a>
+</li>
+            
+<li>
+    <a href="../backend/" class="dropdown-item">Backend Architecture</a>
+</li>
+            
+<li>
+    <a href="../design-system/" class="dropdown-item">Design System Helper</a>
+</li>
+            
+<li>
+    <a href="../devops/" class="dropdown-item">DevOps Architecture</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Development Culture</a>
+</li>
+            
+<li>
+    <a href="../frontend/" class="dropdown-item">Frontend Architecture</a>
+</li>
+            
+<li>
+    <a href="../github/" class="dropdown-item">GitHub Architecture</a>
+</li>
+            
+<li>
+    <a href="../installation/" class="dropdown-item">Installation Instructions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Misc</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../misc/ada-guide/" class="dropdown-item">ADA Guide</a>
+</li>
+            
+<li>
+    <a href="../../misc/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../misc/history/" class="dropdown-item">History</a>
+</li>
+            
+<li>
+    <a href="../../misc/our-process/" class="dropdown-item">Our Process</a>
+</li>
+            
+<li>
+    <a href="../../misc/research-wiki-template/" class="dropdown-item">Research Wiki Template</a>
+</li>
+            
+<li>
+    <a href="../../misc/security-updates/" class="dropdown-item">Security Updates</a>
+</li>
+            
+<li>
+    <a href="../../misc/the-team/" class="dropdown-item">The Team</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../resources/" class="nav-link">Resources</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/hackforla/CivicTechJobs" class="nav-link">CivicTechJobs Repo</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../devops/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../frontend/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hackforla/CivicTechJobs/tree/main/mkdocs" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#development-culture" class="nav-link">Development Culture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#make-issues" class="nav-link">Make Issues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#resolve-issues" class="nav-link">Resolve Issues</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#frontend-issues" class="nav-link">Frontend issues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#backend-issues" class="nav-link">Backend issues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#review-code" class="nav-link">Review Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="development-culture">Development Culture</h1>
+<p>At CivicTechJobs, the developers of our team have 3 key tasks:</p>
+<ul>
+<li>Make issues</li>
+<li>Resolve issues</li>
+<li>Review code</li>
+</ul>
+<p>This guide will discuss how each of these work at CivicTechJobs. If you have any questions be sure to let us know! We strive to create an inclusive space for developers to learn and achieve their goals.</p>
+<h2 id="make-issues">Make Issues</h2>
+<blockquote>
+<p>To make an issue, follow <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue">this guide</a> from GitHub, or take a look at <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#making-issues-1">this section</a> of the CONTRIBUTING.md.</p>
+</blockquote>
+<p>At CivicTechJobs, updating the project starts with creating an issue outlining the situation and changes needed to resolve the situation. When writing an issue, a good rule of thumb is to write as if another developer would be the one to work on the issue. Therefore, being thorough is better than brief. Some good guidelines to follow:</p>
+<ul>
+<li>Write a brief, two sentence summary for the overview. Be sure to note why these changes is needed.</li>
+<li>In the overview, use language with little jargon.</li>
+<li>Action items are usually step by step instructions or a list of requirements.</li>
+<li>Longer explanations or useful documentation, if needed, are placed in the Instruction/Resources section.</li>
+<li>Dependencies should 90% of the time be another issue. If this issue does not exist, it should probably be made and referenced as a dependency.</li>
+<li>Likewise, the dependency should reference the issue it is a dependency for so that there is a trail to release issues with dependencies.</li>
+<li>Check out examples of developer issues, such as <a href="https://github.com/hackforla/CivicTechJobs/issues/61">this</a>, for how to structure and word issues.</li>
+</ul>
+<p>After writing out the issue, be sure to <a href="https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label">add labels</a>. At minimum, we need three labels, one each from the "size", "role" and "feature/p-feature" series. In most cases, you should not create your own label. If you are unsure what labels to place, it is okay to leave it be, as another team member will help you when they notice the issue lacks certain labels.</p>
+<p>Once an issue is created, and placed in the <a href="https://github.com/hackforla/CivicTechJobs/projects/1">Project Management</a> project board, the developer is mostly done with the issue. If the issue contains a dependency, it will move into the "Ice Box" column via <a href="https://github.com/hackforla/CivicTechJobs/blob/bafc2fc1706ac49ec9c2c7cb610a29bddc561339/.github/workflows/issue-trigger.yml#L7">GitHub automation</a>, or "New Issue Approval", otherwise.</p>
+<p>On rare occasions, a project manager, or other team members, might ping you with questions on the issue. Perhaps the team member did not understand the jargon, or the instructions were unclear. In that case, read their concerns carefully and either answer with a comment, or edit the original issue. Eventually, the issue will be approved, prioritized, and released into the "Prioritized Backlog" column, where developers can work on it.</p>
+<h2 id="resolve-issues">Resolve Issues</h2>
+<blockquote>
+<p>To resolve an issue, take a look at <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#resolving-issues-1">this section</a> of the CONTRIBUTING.md.</p>
+</blockquote>
+<p>When choosing an issue to work on from the "Prioritized Backlog" column, it is good to note the "role" and "size" label. This signals the expertise required and time commitment needed to resolve the issue. As a rule of thumb, a smaller issue should take a week, and a larger issue, two or three weeks. This should give you a good idea on what issues is best for you to take at the moment. If you are completely new, we recommend taking smaller issues to understand your limits before pushing them further. That said, you are free to work on whatever you want.</p>
+<p>On occasion, when an issue is being worked on for an inordinate amount of time, the team might request an update on your progress. When giving your progress, it is courteous to give an ETA on the issue, and evaluate on your ability to resolve the issue in a reasonable timeframe. If an issue is taking far too long, it might be wise to abandon the issue and work on something that might bring more value to you and the team.</p>
+<p>Also, one final note: <strong>Do not contact the team via email or Slack to review your pull request unless it as been 72 hours since it was opened! The team will occasionally comb for pull requests and review them.</strong> If you want to move on to another issue, consider reviewing another developer's pull request (if you are part of the team), contribute to other open source projects, or ask the team for additional tasks.</p>
+<p>Most issues can be divided into two broad types: frontend issues, and backend issues.</p>
+<h3 id="frontend-issues">Frontend issues</h3>
+<ul>
+<li>Usually involves the appearance of the site</li>
+<li>Usually easier than backend issues</li>
+<li>Requires little research</li>
+<li>Is occasionally an audit</li>
+<li>May involve documentation</li>
+</ul>
+<p>When working on frontend issues, there will usually be a link to the Figma design. Figma often contains multiple prototypes and future prototypes. When looking for our current design, go to the bottom right corner and look for a pink rectangle. Anything within that represents our most up-to-date design. Use that as a reference for your frontend issues. If the pink rectangle is not there, please request the UI design team to put a pink rectangle on the latest approved design.</p>
+<p>On rare circumstances, designs can change in the middle of work. This is something that happens as part of development, but will often be telegraphed during meetings. If a design change, you are free to reassess and abandon your current issue, or code pragmatically to ensure your work would not need a massive overhaul.</p>
+<h3 id="backend-issues">Backend issues</h3>
+<ul>
+<li>Usually involves research and discussion</li>
+<li>Can also pertain to <a href="https://docs.github.com/en/actions">GitHub Actions</a></li>
+<li>Usually takes some time</li>
+<li>May involve documentation</li>
+</ul>
+<h2 id="review-code">Review Code</h2>
+<blockquote>
+<p>To review code, please take a look at this <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews">GitHub documentation</a>, and this portion of our <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#reviewing-code">CONTRIBUTING.md</a>.</p>
+</blockquote>
+<p>Code that should be reviewed is found in the <a href="https://github.com/hackforla/CivicTechJobs/pulls">pull request tab</a>. These are issues that require someone to look over for several criteria:</p>
+<ul>
+<li>Applicability: Were the correct changes made? Where new lines added or removed that are extraneous to the issue?</li>
+<li>Brokenness: Did the changes break the site? Is the changes responsive to view-port changes?</li>
+<li>Cleanliness: Is the new code programmatic or messy? Would the code be hard to maintain in the long run?</li>
+</ul>
+<p>When code meets all three criteria, it can then be merged and made a part of the site. Otherwise, the review should indicate changes that needs to be made.</p>
+<p>As an advanced project, CivicTechJobs have certain expectations for our developers. One of these is that issues of size 1 or 2 is small enough that we "pre-review" them. This means that we are confident that the developer can resolve these issues without review. Therefore, these issues can be merged directly into our codebase upon resolution. That said, it is still fine to request the team to review your code if feedback is desired.</p>
+<p><strong>Important:</strong> Although issues can be pre-reviewed, do not make a habit of merging without making a pull request. There will be times when you performed an accidental merge, which could be a pain to fix on the command-line.</p>
+<p>As one final note, code can be merged solely on one approved review but it is fine to request more reviewers or ask for the team to review it during a developer meeting.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../js/extra.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

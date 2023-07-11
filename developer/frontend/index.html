@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://hackforla.github.io/CivicTechJobs/developer/frontend/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Frontend Architecture - CivicTechJobs Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CivicTechJobs Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Joining the Team <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../joining-the-team/intro/" class="dropdown-item">Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/content-writer/" class="dropdown-item">Content Writer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/data-scientist/" class="dropdown-item">Data Scientist</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/product-manager/" class="dropdown-item">Project Manager</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-designer/" class="dropdown-item">UI/UX Designer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-researcher/" class="dropdown-item">UI/UX Researcher</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/web-developer/" class="dropdown-item">Web Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/other-volunteer/" class="dropdown-item">Other Volunteer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web Developer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#welcome-to-the-civictechjobs-contributing-guide" class="dropdown-item">CONTRIBUTING.md</a>
+</li>
+            
+<li>
+    <a href="../backend/" class="dropdown-item">Backend Architecture</a>
+</li>
+            
+<li>
+    <a href="../design-system/" class="dropdown-item">Design System Helper</a>
+</li>
+            
+<li>
+    <a href="../devops/" class="dropdown-item">DevOps Architecture</a>
+</li>
+            
+<li>
+    <a href="../development-culture/" class="dropdown-item">Development Culture</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Frontend Architecture</a>
+</li>
+            
+<li>
+    <a href="../github/" class="dropdown-item">GitHub Architecture</a>
+</li>
+            
+<li>
+    <a href="../installation/" class="dropdown-item">Installation Instructions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Misc</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../misc/ada-guide/" class="dropdown-item">ADA Guide</a>
+</li>
+            
+<li>
+    <a href="../../misc/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../misc/history/" class="dropdown-item">History</a>
+</li>
+            
+<li>
+    <a href="../../misc/our-process/" class="dropdown-item">Our Process</a>
+</li>
+            
+<li>
+    <a href="../../misc/research-wiki-template/" class="dropdown-item">Research Wiki Template</a>
+</li>
+            
+<li>
+    <a href="../../misc/security-updates/" class="dropdown-item">Security Updates</a>
+</li>
+            
+<li>
+    <a href="../../misc/the-team/" class="dropdown-item">The Team</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../resources/" class="nav-link">Resources</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/hackforla/CivicTechJobs" class="nav-link">CivicTechJobs Repo</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../development-culture/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../github/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hackforla/CivicTechJobs/tree/main/mkdocs" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#frontend-architecture" class="nav-link">Frontend Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#overview-of-directories-and-files" class="nav-link">Overview of Directories and Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#components-directory" class="nav-link">Components Directory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#webpack-configurations" class="nav-link">Webpack Configurations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#why-do-we-separate-babel-from-webpack" class="nav-link">Why do we separate Babel from webpack?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testing" class="nav-link">Testing</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#component-testing" class="nav-link">Component Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#accessibility-testing" class="nav-link">Accessibility Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-resources" class="nav-link">Additional Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="frontend-architecture">Frontend Architecture</h1>
+<pre><code class="language-yml">├── .github/
+│   └── ISSUE_TEMPLATE/
+├── app/
+│    ├── config/
+│          └── settings.py
+│    ├── frontend/ # Frontend
+│    ├── server/
+|    ├── tests/  # Frontend
+|    ├── .babelrc  # Frontend
+|    ├── .jest.config.js  # Frontend
+│    ├── manage.py
+│    ├── requirements.txt
+│    ├── package.json # Frontend
+│    ├── package-lock.json # Frontend
+│    └── webpack.config.js # Frontend
+├── dev/
+│    ├── django.dockerfile
+│    ├── webpack.dockerfile
+│    └── dev.env
+├── .dockerignore
+├── .gitignore
+├── jsconfig.json
+├── CONTRIBUTING.md
+├── docker-compose.yml
+├── LICENSE
+└── README.md
+</code></pre>
+<p><em><p style="text-align: center;">Overall project structure</p></em></p>
+<pre><code class="language-yml">├── frontend/
+│   ├── src/
+│       ├── assets/
+│       ├── components/
+│           ├── Apps.js
+│           └── &lt;Components&gt;/
+│       ├── pages/
+│       ├── templates/
+│           └── index.html
+│       ├── index.js
+│       └── index.scss
+│   ├── static
+│   └── templates
+├── tests/
+├── .babelrc
+├── .jest.config.js
+├── package-lock.json
+├── package.json
+└── webpack.config.js
+</code></pre>
+<p><em><p style="text-align: center;">Frontend Architecture</p></em></p>
+<h2 id="summary">Summary</h2>
+<p><strong>Frontend Tech Stack</strong>: React, Babel, webpack, Jest, React Testing Library, HTML, SCSS, JS</p>
+<p>The over ninety percent of our frontend architecture is housed in our <code>frontend/</code> directory. This directory is a <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/">Django app</a>, which is a set of files that can be ported to any Django-based application.</p>
+<p>Since our frontend is a Django app, it takes advantage of the way Django serves its static assets. Every Django app, by default, looks to the <code>templates/</code>* directory within the app for the <code>html</code> template file to serve. This template usually contains <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> tags denoting the location of SCSS and JS files. In Django, these files are usually located inside the <code>static/</code>* directory. Likewise, our frontend app store our templates and static assets within these directories.</p>
+<p>Despite these similiarties, however, the files in these two directories should never be manipulated by a developer. These files are automatically generated by an application called <a href="https://webpack.js.org/">webpack</a> via configurations in <code>webpack.config.js</code> and <code>.babelrc</code>.</p>
+<p>The files that should be manipulated by developers are housed within the <code>src/</code> directory. Inside of here are directories for <code>assets/</code>, <code>componenents/</code>, <code>pages/</code>, <code>router</code>, and <code>templates/</code>. Each of these directories contains the files which webpack reads and then bundle into output files for the <code>static/</code> and <code>template/</code> directories.</p>
+<blockquote>
+<h6 id="note-the-templates-and-static-directories-contain-within-them-a-frontend-directory-in-order-to-namespace-template-and-static-files-although-this-serves-little-purpose-for-our-project-it-is-a-django-convention-that-prevents-django-from-confusing-the-templates-and-static-directories-from-the-frontend-app-vs-another-app"><em>*Note: The <code>templates/</code> and <code>static/</code> directories contain within them a <code>frontend/</code> directory in order to namespace template and static files. Although this serves little purpose for our project, it is a Django convention that prevents Django from confusing the <code>templates/</code> and <code>static/</code> directories from the frontend app vs another app.</em></h6>
+</blockquote>
+<h2 id="overview-of-directories-and-files">Overview of Directories and Files</h2>
+<ul>
+<li><strong>frontend/:</strong> houses all the frontend files.</li>
+<li><strong>frontend/src/:</strong> houses all the files for developers to manipulate. The files here are read by webpack before being bundled into the <code>static/</code> and <code>templates/</code> directories.<ul>
+<li><strong>assets/:</strong> this is where we store all of our miscellaneous files, such as .jpegs, .svgs, .gifs, etc.</li>
+<li><strong>componenents/:</strong> this is where we store the files that generate our components, such as buttons and cards. To learn more about this in-depth, read the <a href="#components-directory">components</a> section of this guide.</li>
+<li><strong>pages/:</strong> contains the React files that pools together various components to generate a page.</li>
+<li><strong>router/:</strong> contains the routing logic for the project. It uses the <a href="https://reactrouter.com/docs/en/v6">React-Router library</a>.</li>
+<li><strong>templates/:</strong> contains HTML files that are then generated into the regular templates directory. To learn more about how webpack bundle our files, read the <a href="#webpack-configurations">webpack</a> section of this guide.</li>
+<li><strong>index.js:</strong> this file serves as the entry point for all other js files*. This file is read by webpack, and then bundled into code in the <code>static</code> directory.</li>
+<li><strong>index.scss:</strong> this file serves as the entry point for all other scss files*.</li>
+</ul>
+</li>
+<li><strong>frontend/static/:</strong> automatically generated by webpack, <em>DO NOT EDIT</em></li>
+<li><strong>frontend/templates/:</strong> automatically generated by webpack, <em>DO NOT EDIT</em></li>
+<li><strong>tests/:</strong> contains our test files. To run these files simply use <code>docker compose run webpack npm run test</code>.</li>
+<li><strong>.babelrc:</strong> Babel's configuration. To learn more about this, please visit <a href="https://babeljs.io/docs/en/config-files#file-relative-configuration">babel's documentation</a>.</li>
+<li><strong>.jest.config.js:</strong> Jest's configuration. To learn more about configuring Jest, please visit <a href="https://jestjs.io/docs/configuration">jest's documentation</a>.</li>
+<li><strong>package-lock.json &amp; package.json:</strong> These files are created by npm to keep track of dependencies. Please visit <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">npm's</a> <a href="https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json">documentation</a> to understand them.</li>
+<li><strong>webpack.config.js:</strong> webpack's configuration. To learn more about configuring webpack, please visit their <a href="https://webpack.js.org/configuration/">documentation</a>. To learn about our specific configuration, see the <a href="#webpack-configurations">below guide</a>.</li>
+</ul>
+<h6 id="note-this-is-technically-a-lie-in-actuality-indexjs-reads-indexs-as-well-as-the-react-files-making-it-the-only-entryway-for-all-files-bundled-in-the-src-directory"><em>*Note: This is technically a lie. In actuality, <strong>index.js</strong>, reads <strong>index.s</strong> as well as the React files, making it the only entryway for all files bundled in the <code>src/</code> directory.</em></h6>
+<h2 id="components-directory">Components Directory</h2>
+<pre><code class="language-yml">├── components/
+│   ├── Basics/
+│       ├── Colors.scss
+│       └── Titles.scss
+│   ├── Buttons/
+│       ├── Button.js
+│       └── Button.scss
+│   ├── Cards/
+│       ├── Cards.js
+│       └── Cards.scss
+│   └── &lt;Components&gt;/
+</code></pre>
+<p><em><p style="text-align: center;">A closer look at a theoretical expansion of the components directory</p></em></p>
+<p>The components directory contains our site components. Each directory in here represents a different class of components, such as <code>Buttons/</code>* or <code>Cards/</code>*. Within these directories are the files necessary that creates these components. Likewise, the special <code>Basics/</code> directory contains small CSS classes that are reused, but not, technically, components, such as text-size or text-colors.</p>
+<h6 id="note-these-files-are-capitalized-to-follow-react-convention-for-components-when-making-new-components-please-make-sure-to-follow-this-convention-this-convention-is-in-place-to-help-react-differentiate-between-modules-vs-other-types-of-imports"><em>*Note: These files are capitalized to follow React convention for components. When making new components, please make sure to follow this convention. This convention is in place to help React differentiate between modules vs other types of imports.</em></h6>
+<h2 id="webpack-configurations">Webpack Configurations</h2>
+<pre><code class="language-javascript">...
+
+module.exports = {
+    mode: 'development',
+    entry: {
+        index: &quot;./frontend/src/index.js&quot;
+    },
+    output: {
+        clean: {
+            keep: '.gitkeep'
+        },
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'frontend/static/frontend'),
+    },
+    devtool: 'inline-source-map',
+    module: {
+        rules: ...
+    },
+    optimization: {
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks: ...
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: '../../templates/frontend/index.html',
+            template: '/frontend/src/templates/index.html',
+        }),
+    ],
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+}
+</code></pre>
+<p><em><p style="text-align: center;">webpack.config.js (truncated)</p></em></p>
+<p>Our <code>webpack.config.js</code> file is one of the most important files to understanding how our frontend architecture comes together. Therefore, this section is dedicated to the settings that we have set for this file. Note that we do not explain all the settings, as some can be found and easily deduced from webpack's <a href="https://webpack.js.org/configuration/">configuration</a> and <a href="https://webpack.js.org/guides/">guides</a> documentation.</p>
+<ul>
+<li><strong>entry:</strong> the file that is ultimately read by webpack to bundle everything together. This file, <code>index.js</code> imports all dependencies and files that makes up our product. Note that <a href="https://webpack.js.org/guides/entry-advanced/">advanced multiple entry</a> is possible, should we ever need it.</li>
+<li><strong>output:</strong> contains configurations for the files that are generated in the <code>static/</code> directory</li>
+<li><strong>output &gt; clean &gt; keep:</strong> clean is usually used to clear away old files before generating new ones (filenames are variable to force browser css/js recacheing). However, keep notes files that should not be removed*.</li>
+<li><strong>output &gt; filename:</strong> this configures the name of the generated js files. [name] is simply the name of the file noted in the <em>entry</em> configuration, and [contenthash] is a randomly generated string, which forces browser recacheing.</li>
+<li><strong>output &gt; path:</strong> the directory to place the generated file. This directory is the one that Django, by default, detects its static files.</li>
+<li><strong>optimization:</strong> this contains a catch-all for various ways to enhance either development or deployment. For more on our current configuration, read <a href="https://webpack.js.org/guides/caching/">this guide</a>.</li>
+<li><strong>plugins &gt; HtmlWebpackPlugin:</strong> this plugin enables us to dynamically generate templates with the correct <code>&lt;script&gt;</code> and <code>&lt;styles&gt;</code> path by reading the <em>template</em> and outputing it with the path noted by <em>filename</em>. This output path follows Django's default template directory structure.</li>
+<li><strong>watchOptions &gt; ignored:</strong> configures files to ignore when regenerating watched files.</li>
+</ul>
+<h6 id="note-the-kept-gitkeep-file-is-there-to-give-an-empty-file-for-git-to-preserve-the-otherwise-empty-directory-when-pushed-onto-github-as-you-might-have-guessed-git-does-not-push-empty-directories"><em>*Note: The kept <code>.gitkeep</code> file is there to give an empty file for git to preserve the otherwise empty directory when pushed onto GitHub. As you might have guessed, git does not push empty directories.</em></h6>
+<h3 id="why-do-we-separate-babel-from-webpack">Why do we separate Babel from webpack?</h3>
+<p>If you have explored documentation from webpack, you might learn that the <em>babel-loader</em> in <strong>module &gt; rules</strong> can accept the settings noted in <code>.babelrc</code>. The reason why we separate these settings into another file is because webpack is not, in theory, the only application that makes use of these settings. Although we have no other apps that makes use of <code>.babelrc</code> at the moment, this can change in the future. Therefore, this separation of files is a form of future proofing.</p>
+<h2 id="testing">Testing</h2>
+<h3 id="component-testing">Component Testing</h3>
+<p>Our tests exists inside the tests directory with subdirectories that follows <code>frontend/src</code>. There is also <code>__mock__/</code> which contains code that bypasses certain tricky imports, such as svg or SCSS assets, which are not needed when testing. In order to understand how to write tests, be sure to take a look at the documentation for <a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</a>, the parent <a href="https://testing-library.com/docs/dom-testing-library/intro">DOM Testing Library</a>, and the support libraries <a href="https://github.com/testing-library/jest-dom">jest-dom</a> and <a href="https://testing-library.com/docs/user-event/intro/">user-event</a>.</p>
+<p>To run these tests, use the command <code>docker compose run webpack npm run test</code> (or with <code>test:w</code> for watch mode). The tests are run through jest, while the other libraries support react testing by providing functions to render DOM elements and simulate user behavior.</p>
+<p>Note: <code>jest-environment-jsdom</code> is a library that is absolutely required to link jsdom to jest. It provides the classes necessary for jest to interpret the jsdom environment. This information is listed here as it is not listed in jest's or jsdom's docs.</p>
+<h3 id="accessibility-testing">Accessibility Testing</h3>
+<p>In addition to testing the functioning of our components, we also test the accessability of it via the library, <a href="https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react">@axe-core/react</a>. This library prints out accessibility issues onto the browser console, providing accessibiltiy testing once the HTML has fully rendered. That said, the library is known to give both false positives and false negatives. As always reading the official documentation is best when it comes to resolving these errors.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://sass-lang.com/documentation">Sass Documentation</a><br>
+<a href="https://reactjs.org/docs/getting-started.html">React Documentation</a><br>
+<a href="https://webpack.js.org/concepts/">Webpack Documentation</a><br>
+<a href="https://babeljs.io/docs/en/babel-preset-react">@babel/preset-react Documentation</a><br>
+<a href="https://reactrouter.com/docs/en/v6">React Router Documentation</a><br>
+<a href="https://jestjs.io/docs/getting-started">Jest Documentation</a><br>
+<a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library Documentation</a><br>
+<a href="https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react">@axe-core/react Documentation</a><br>
+<a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a><br></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../js/extra.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

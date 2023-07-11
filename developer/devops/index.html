@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://hackforla.github.io/CivicTechJobs/developer/devops/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>DevOps Architecture - CivicTechJobs Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CivicTechJobs Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Joining the Team <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../joining-the-team/intro/" class="dropdown-item">Intro</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/content-writer/" class="dropdown-item">Content Writer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/data-scientist/" class="dropdown-item">Data Scientist</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/product-manager/" class="dropdown-item">Project Manager</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-designer/" class="dropdown-item">UI/UX Designer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/uiux-researcher/" class="dropdown-item">UI/UX Researcher</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/web-developer/" class="dropdown-item">Web Developer</a>
+</li>
+                                    
+<li>
+    <a href="../../joining-the-team/other-volunteer/" class="dropdown-item">Other Volunteer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web Developer</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="https://github.com/hackforla/CivicTechJobs/blob/main/CONTRIBUTING.md#welcome-to-the-civictechjobs-contributing-guide" class="dropdown-item">CONTRIBUTING.md</a>
+</li>
+            
+<li>
+    <a href="../backend/" class="dropdown-item">Backend Architecture</a>
+</li>
+            
+<li>
+    <a href="../design-system/" class="dropdown-item">Design System Helper</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">DevOps Architecture</a>
+</li>
+            
+<li>
+    <a href="../development-culture/" class="dropdown-item">Development Culture</a>
+</li>
+            
+<li>
+    <a href="../frontend/" class="dropdown-item">Frontend Architecture</a>
+</li>
+            
+<li>
+    <a href="../github/" class="dropdown-item">GitHub Architecture</a>
+</li>
+            
+<li>
+    <a href="../installation/" class="dropdown-item">Installation Instructions</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Misc</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../misc/ada-guide/" class="dropdown-item">ADA Guide</a>
+</li>
+            
+<li>
+    <a href="../../misc/glossary/" class="dropdown-item">Glossary</a>
+</li>
+            
+<li>
+    <a href="../../misc/history/" class="dropdown-item">History</a>
+</li>
+            
+<li>
+    <a href="../../misc/our-process/" class="dropdown-item">Our Process</a>
+</li>
+            
+<li>
+    <a href="../../misc/research-wiki-template/" class="dropdown-item">Research Wiki Template</a>
+</li>
+            
+<li>
+    <a href="../../misc/security-updates/" class="dropdown-item">Security Updates</a>
+</li>
+            
+<li>
+    <a href="../../misc/the-team/" class="dropdown-item">The Team</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../resources/" class="nav-link">Resources</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://github.com/hackforla/CivicTechJobs" class="nav-link">CivicTechJobs Repo</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../design-system/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../development-culture/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/hackforla/CivicTechJobs/tree/main/mkdocs" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#devops-architecture" class="nav-link">DevOps Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#overview-of-directories-and-files" class="nav-link">Overview of Directories and Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#docker" class="nav-link">Docker</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#docker-composeyml" class="nav-link">docker-compose.yml</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#dockerfile" class="nav-link">*.dockerfile</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#environments" class="nav-link">Environments</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#development" class="nav-link">Development</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#staging" class="nav-link">Staging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#useful-commands" class="nav-link">Useful Commands</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="3"><a href="#alias-shell-script" class="nav-link">Alias Shell Script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#aliassh" class="nav-link">alias.sh</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="3"><a href="#alias-configtxt" class="nav-link">alias-config.txt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#additional-resources" class="nav-link">Additional Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="devops-architecture">DevOps Architecture</h1>
+<pre><code class="language-yml">├── .github/
+│   └── ISSUE_TEMPLATE/
+├── app/
+│    ├── config/
+│          └── settings.py
+│    ├── frontend/
+│    ├── server/
+│    ├── .babelrc
+│    ├── manage.py
+│    ├── requirements.txt
+│    ├── package.json
+│    ├── package-lock.json
+│    └── webpack.config.js
+├── dev/ # DevOps
+│    ├── django.dockerfile
+│    ├── webpack.dockerfile
+│    └── dev.env
+├── .dockerignore # DevOps
+├── .gitignore
+├── jsconfig.json
+├── CONTRIBUTING.md
+├── docker-compose.yml # DevOps
+├── LICENSE
+└── README.md
+</code></pre>
+<p><em><p style="text-align: center;">Overall project structure</p></em></p>
+<pre><code class="language-yml">├── dev/
+│    ├── django.dockerfile
+│    ├── webpack.dockerfile
+│    └── dev.env.example
+├── .dockerignore
+├── docker-compose.yml
+├── alias-config.txt
+└── alias.sh
+</code></pre>
+<p><em><p style="text-align: center;">DevOps Architecture</p></em></p>
+<h2 id="summary">Summary</h2>
+<p><strong>DevOps Tech Stack</strong>: Docker, Gunicorn, Nginx, PostgreSQL, test</p>
+<p>Our devops files can be thought of as a set of files needed to create an exact replica of our environments for our developers. Although the overall structure appears deceptively basic, it only represents a fraction of our devops files. Several of our files, such as the ones that construct our staging environment, contains sensitive information, and as such as not placed in our public repository. For most frontend and backend work, there is never a need to access these files.</p>
+<blockquote>
+<h6 id="note-on-the-rare-occasions-that-there-is-a-need-to-access-the-sensitive-files-for-environments-other-than-development-please-consult-the-development-lead-of-the-project-they-will-know-exactly-what-files-you-need-and-what-permissions-you-need-to-access-them"><em>*Note: On the rare occasions that there is a need to access the sensitive files for environments other than development, please consult the development lead of the project. They will know exactly what files you need, and what permissions you need to access them.</em></h6>
+</blockquote>
+<h2 id="overview-of-directories-and-files">Overview of Directories and Files</h2>
+<ul>
+<li><strong>dev/:</strong> contains two dockerfiles and an env file. <code>django.dockerfile</code> contains information for our Django server setup. <code>webpack.dockerfile</code> contains information to start our webpack watch plugin. <code>dev.env.example</code> is an example of the env file needed to configure our dev environment.</li>
+<li><strong>.dockerignore:</strong> This file tells Docker to ignore certain files when building the container. These are usually files that pertain to docker or git, which are not important when building the webserver.</li>
+<li><strong>docker-compose.yml:</strong> Contains instructions for docker when we run "docker compose". To know more about what each line does, please consult <a href="https://docs.docker.com/compose/compose-file/">Docker's documentation</a>.</li>
+<li><strong>alias.sh:</strong> Contains a shell script that allows for cumbersome commands to be executed with less typing by leveraging the aliases listed in <code>alias-config.txt</code></li>
+</ul>
+<h2 id="docker">Docker</h2>
+<p>Docker is a platform that allows packaging and virtualizing applications within a container. This gives developers the powerful ability to collaborate in a stable, synchonized environment, and deploying web applications with the greatest of ease. We will not be going too much into Docker here, but we will explain in greater depth some of the Docker configurations we have made.</p>
+<h3 id="docker-composeyml"><code>docker-compose.yml</code></h3>
+<p>This file contains configuration directions for docker compose. It consists of three services: pgdb (our database), webpack (our webpack bundler), and django (our django server). The webpack and django service relies in separate dockerfiles, located in the <code>dev</code> directory to build the container. This separation of dockerfiles enable each container to be build with its own set of dependencies. It also makes rebuilding the container simple when dependencies are migrated to a newer version.</p>
+<p>For those of you used to creating applications without Docker, most would run webpack and django in separate terminals, so that they can both run at the same time. For the purposes of brevity, the different services can be considered to be Docker's way of running separate terminals.</p>
+<p>One will also notice that the Django command uses a placeholder server name, 0.0.0.0:8000. This placeholder is important, since Docker creates an isolated environment. As a result, servers that are run in Docker does not recognize a browser from outside of that environment. Without this server name, localhost:8000 will not reach the server, as the server would recognize your browser as coming from a foreign machine. Therefore, all warnings related to 0.0.0.0, should they pop-up, should be ignored.</p>
+<h3 id="dockerfile"><code>*.dockerfile</code></h3>
+<p>Dockerfiles are files that define how a container is built. Although containerization is a deep concept, to put it briefly, you can think of containers as separate "mini-computers", each programmed to do one thing. Some containers, such as our <code>pgdb</code> container does not require a dockerfile to configure it, as it works out of the box. On the otherhand, our <code>webpack</code> and <code>django</code> containers need dockerfile to built out the files we need to run it effectively.</p>
+<pre><code class="language-dockerfile">FROM node:latest
+
+WORKDIR /code
+
+
+# install app dependencies
+COPY ./package.json ./
+COPY ./package-lock.json ./
+RUN npm install
+
+
+# add app
+COPY . .
+</code></pre>
+<p><em><p style="text-align: center;">Sample dockerfile that copies the package.json from a project and installs all dependencies.</p></em></p>
+<p>Dockerfiles are usually named as just <code>dockerfile</code>, as that is the default name that docker looks for when constructing our builds. Since our project requires multiple dockerfiles, we name them with <code>.dockerfile</code> extensions, a convention that allows VSCode to detect dockerfiles and use appropriate syntax highlighting.</p>
+<p>Do note that docker and dockerfiles can be fickle to work with, especially on old devices. Further down this documentation are various tips and commands that can be used with docker to help debug your code. But as always, consulting official documentation is the best way to get accurate, up-to-date information.</p>
+<h2 id="environments">Environments</h2>
+<h3 id="development">Development</h3>
+<p>Our development environment is entirely defined by our <code>docker-compose.yml</code>, and the files inside of <code>dev/</code>. More information about those files can be found above.</p>
+<p>Of note, however, is the dev.env.example file. This file is only a sample, but lists out all the environmental variables needed to run our site. While most of them are prefilled, some uses <code>&lt;&gt;</code> to indicate placeholders, which must be filled in by the developer.</p>
+<h3 id="staging">Staging</h3>
+<p>More information on our staging files can be found with our staging files. To access this information, please ask for the required permissions from the development lead.</p>
+<h2 id="useful-commands">Useful Commands</h2>
+<pre><code class="language-bash">docker compose down -v
+</code></pre>
+<p>Useful to completely remove a container and related volumes. This is helpful when fiddling with database settings, which often breaks the database. This command allows the container to be restarted fresh.</p>
+<pre><code class="language-bash">docker compose -f &lt;filename&gt; &lt;docker command&gt;
+</code></pre>
+<p>Use this to specify an alternate docker-compose file to run your commands, such as docker-compose-other.yml. This is useful if you want to test out docker for yourself.</p>
+<pre><code class="language-bash">docker compose run &lt;container&gt; &lt;command&gt;
+</code></pre>
+<p>This is useful to run one time commands inside your container. Some good commands to run are:</p>
+<ul>
+<li>python manage.py makemigrations</li>
+<li>python manage.py migrate</li>
+<li>python manage.py createsuperruser</li>
+<li>pip install -r requirements.txt</li>
+<li>npm install <dependency></li>
+</ul>
+<pre><code class="language-bash">docker exec -it &lt;container&gt; sh
+</code></pre>
+<p>Use this to do heavier debugging inside of your container. What this does is open the shell inside of the container's "mini-computer". This allows you to explore the files inside the container to see if it matches what you would expect after building is finished. This command only works when a container is running, so use <code>docker compose run -d</code> to run your container in the background beforehand.</p>
+<pre><code class="language-bash">docker compose build --progress=plain
+</code></pre>
+<p>Sometimes when a build is happening, the logs are too opaque to debug if a step goes wrong. This commands makes the logs a bit more verbose so that you might have an easier time debugging.</p>
+<h3 id="alias-shell-script">Alias Shell Script</h3>
+<p>For convenience, we have created a shell script that allows for longer commands to be executed with less typing. The script is capable of executing any of the commands listed in <code>alias-config.txt</code> without having to type out the entire command.</p>
+<h3 id="aliassh"><code>alias.sh</code></h3>
+<p>To use this script, run <code>bash alias.sh $arg</code> or <code>./alias.sh $arg</code> where <code>$arg</code> is the alias of the command you wish to execute. For example, try running <code>bash alias.sh test</code>.</p>
+<h3 id="alias-configtxt"><code>alias-config.txt</code></h3>
+<p>This file contains many of the important commands you will need when developing for this project. Note that each command starts with a single word followed by a <code>:</code> and then a command. You must follow this pattern when adding additional commands to the file. Please note that any <code>docker run</code> commands must use the <code>-T</code> flag to allocate a pusedo-TTY or the command will not work.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://docs.docker.com/">Docker Documentation</a><br></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../js/extra.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
